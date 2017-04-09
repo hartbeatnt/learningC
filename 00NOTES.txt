@@ -155,3 +155,18 @@ CASTING: the process of converting a variable to a new data-type
     --  casting double to float DOES round the result
     --  casting char to int results in the ascii value of that char
     --  casting int to char results in ascii value for that int
+////////////////////
+//
+//  ARRAYS
+//
+//  --  0-based indexing
+//  --  size of array must be specified in declaration
+//    --  data-type array-name [number-of-elements]
+//    --  adding a \0 (null character escape) to the end
+//        of an array of chars makes it a string
+//    --  can leave out the number of elements if the
+//        array is being initialized when declared:
+//        --  char newString[] = {'a', 'b', 'c', '\0'}
+//    --  individual indices in the array are accessed
+//        with brackets, i.e. newString[2]
+//
