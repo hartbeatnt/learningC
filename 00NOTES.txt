@@ -82,6 +82,23 @@ __VARIABLES__
         --  precision specifier can be combined with minimum space
           --  syntax: minimum space first, then precision
           --  %07.2f would show seven characters including two decimal places
-
-
-///////\\\\\\
+//////////////////\\\\\\\\\\\\\\\\\
+//
+//  INPUT / OUTPUT  
+//  --  scanf() function is used to get user input. Requires two arguments:
+//    --  type of data to be input
+//      --  use one of the above format specifiers
+//    --  location to store output
+//      --  must be a variable name preceded by the & operator
+//         --  unless teh input is a string of text
+//        --  & has many uses in C, but in this case it is the "addressof" 
+//            operator. 
+//              --  Means the data should be stored at the memory
+//                  address reserved for that variable
+//              --  Can also be used to retrieve the hexadecimal memory address
+//                  of where a variable is saved
+//  --  scanf() can simultaneously assign value to multiple variables at once
+//    --  first argument must be a list of format specifiers separated by spaces
+//        and surrounded by double quotes
+//    --  second argument must be a comma-separated list of variable names 
+//        preceded by & operator (so realyy 2nd argument, 3rd argument, 4th, etc)
