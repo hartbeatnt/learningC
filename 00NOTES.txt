@@ -120,3 +120,38 @@ __VARIABLES__
                                                      //
 ///////////////////////////////////////////////////////
 
+SCOPING
+  --  variable declared within a function are "local"
+    --  can only be accessed from within the function
+        in which they were declared
+  --  variables declared outside of a function are "global"
+    --  can be accessed from within any function in the programs
+    --  must be declared once at the start of the program, and then
+        once at the start of each function that uses it
+        --  extern keyord must be used at start of declaration
+            when declared in a function
+        --  static keyword limits variables and functions to
+            being used in the file in which they were declared
+            --  allows for variable / function names to be reused
+                in different files
+            --  using static when declaring variables within a function
+                makes it so the variable is not deleted when the function
+                finishes executing (like for closures? idk)
+    --  extensive use of global variables is risky
+  
+///////////////////
+REGISTERING VARIABLES
+  --  if a variable is expected to be used frequently, the register
+      keyword can be used to save it in an easier to locate memory 
+      address.
+      --  many compilers ignore this
+      --  volatile keyword does the opposite
+///////////////////
+CASTING: the process of converting a variable to a new data-type
+    --  syntax: variable-name2 = (modifiers data-type) variable-name1
+    --  does not actually change the type of the variable but copies
+        the data to new variable of the new type
+    --  casting float to int results in decimal being truncated, not rounded
+    --  casting double to float DOES round the result
+    --  casting char to int results in the ascii value of that char
+    --  casting int to char results in ascii value for that int
