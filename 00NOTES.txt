@@ -102,3 +102,21 @@ __VARIABLES__
 //        and surrounded by double quotes
 //    --  second argument must be a comma-separated list of variable names 
 //        preceded by & operator (so realyy 2nd argument, 3rd argument, 4th, etc)
+//
+///////////////////////////////////////////////////////
+                                                     //
+                  QUALIFYING VARIABLES               //
+      --  ints can be specified as short or long     //
+        --  short: takes up less memory space        //
+        --  long: holds a bigger range of numbers    //
+      --  ints can double their max value by being   //
+          declared "unsigned," but then cannot hold  //
+          negative values                            //
+      --  <limits.h> contains all the info about     //
+          implementation-specific mins and maxs      //
+      --  sizeof operator is used to reveal the      //
+          amount of memory reserved by variables of  //
+          different data types                       //
+                                                     //
+///////////////////////////////////////////////////////
+
