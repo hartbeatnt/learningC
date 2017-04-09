@@ -1,0 +1,87 @@
+FUNCTION DEFINITION SYNTAX: 
+  data-type function-name(argument-types,) {statements to be exectued;}
+/////////////////////////////////////////////////////// 
+data-type is the return value of the function's type
+
+programs can have multiple functions but must always have at least one called "main"
+
+function names cannot begin with numbers
+
+strings must be enclosed in double quotes
+single characters must be enclosed in single quotes
+//////////////////////////////////////////////////////
+//
+//  COMPILING:
+//  --  Four separate stages, each of which generate a new file:
+//      --  PREPROCESSING: The preprocessor ubstitutes all the preprocessor 
+//            (#<>) directives with the actual library code that implements
+//            those directives. Generated file has a .i extension
+//
+//      --  TRANSLATING: The compiler ranslates all the high-level //
+//            instructions from ths .i file into assembly language 
+//            instructions. Generated file has a .s extension
+//
+//      --  ASSEMBLING: The assembler converts the assembly language
+//            from the .s file into machine code. Generated object file
+//            is in binary and has .s extension
+//
+//      --  LINKING: The linker combines one or more binary object .o files
+//            into a single executable file. Generated file is in binary and
+//            has a .exe file extension.
+//
+//  --  If the program contains syntax errors, they will be reported by the
+//        compiler and the program will not build
+//
+//  --  The linker can combine multiple object binaries. If it finds a function
+//        of the same name declared in multiple object files it will report an
+//        error and the executable will not be created
+//
+///////////////////////////////////////////////////////
+
+\\\\\\\//////
+__VARIABLES__
+  --  declared in following syntax: 
+        data-type variable-name ;
+    --  cannot contain any C keywords
+    --  cannot contain arithmetic operators (+ - = * /)
+    --  cannot contain punctuation characters (~ ! @ # % ^ & * ( ) ' ")
+    --  cannot contain any spaces
+    --  cannot start with a number
+    --  can contain numbers in any position other than the first
+    --  can contain both uppercase and lowercase letters
+    --  can contain underscores
+    --  are case sensitive
+  --  available data types:
+    --  "char": single byte, holds one character
+    --  "int": integer whole number
+    --  "float": floating-point number accurate to six decimal places
+    --  "double": floating-point number accurate to ten decimal places
+    --  multiple variables of the same type can be declared in the same line
+        with a comma-separated list:
+          data-type variable-name-1, variable-name-2, variable-name-3
+  --  variables should be declared in the program before any executable code
+  --  a variable is "initialized" when a value is assigned to it
+    --  code to left of assignment operator is called L-value object
+    --  code to the right of assignment operator is called R-value data
+    --  variables can be initialized when first declared or at a later point
+  -- Displaying a variable:
+    --  Format must be specified as an argument to the printf() function:
+      --  %d: an integer between -32768 and +32767
+      --  %ld: a long integer (between -2^31 and +2^31)
+      --  %f: a floating-point number
+      --  %c: a single character
+      --  %s: a string of characters
+      --  %p: a machine-memory address
+        --  a minimum space specifier can set the minimum number of characters 
+            that the print must contain
+          --  %7d would make the digit take up seven characters
+          --  passing a 0 between % and [n] filles empty spaces with zeroes
+          --  prefixing with a negative sign causes left-alignment
+        --  a precision specifier can be used with %f to determine how many
+            decimal places to show, i.e. %.2f would show two
+        --  precision specifier can be combined with minimum space
+          --  syntax: minimum space first, then precision
+          --  %07.2f would show seven characters including two decimal places
+
+
+///////\\\\\\
