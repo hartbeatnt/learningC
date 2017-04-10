@@ -1,3 +1,5 @@
+// compile globals1 together with globals2 to create globals.exe
+
 #include <stdio.h>
 
 static int sum = 100;
