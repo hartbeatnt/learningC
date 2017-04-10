@@ -179,4 +179,12 @@ CASTING: the process of converting a variable to a new data-type
 
 PROGRAM CONSTANTS:
     --  const keyword makes a variable unchangeable
-    
+    --  enum keyword allowsfor creation of a sequence of ineteger constants
+      --  sequence can take an optional name after the enum keyword
+      --  each of the constants will by default have a value of one more
+          than the previous value unless otherwise specified
+      --  if no initial value is supplied for the first entry, it will default to 0
+        --  i.e. enum{MON, TUE, WED, THUR, FRI} => WED has an integer value of 2
+        --  enum{MON=1, TUE, WED, THUR=5, FRI} => WED has value 3, FRI has value 6
+      --  enums may contain duplicate values
+      
