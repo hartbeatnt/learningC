@@ -169,4 +169,8 @@ CASTING: the process of converting a variable to a new data-type
 //        --  char newString[] = {'a', 'b', 'c', '\0'}
 //    --  individual indices in the array are accessed
 //        with brackets, i.e. newString[2]
-//
+//    --  arrays can be multi-dimensional:
+//      --  data-type matrix-name[num-elems][num-elems] = { { , } , { , } }
+//      --  number of elements in nested arrays must be filled in when
+//          declaring matrix.
+//          --  outer array length may be left empty

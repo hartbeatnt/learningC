@@ -7,7 +7,7 @@ int main()
   arr[0] = 100;
   arr[1] = 200;
   arr[2] = 300;
-  char str[5] = {'T','e','s','t','\0'};
+  char str[] = {'T','e','s','t','\0'};
 
   printf("1st element value: \t %d \n", arr[0]);
   printf("2nd element value: \t %d \n", arr[1]);
