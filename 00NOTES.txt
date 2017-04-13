@@ -178,19 +178,49 @@ CASTING: the process of converting a variable to a new data-type
 /////////////////////////////////////////////////////////////////////////////
 
 PROGRAM CONSTANTS:
-    --  const keyword makes a variable unchangeable
-    --  enum keyword allowsfor creation of a sequence of ineteger constants
-      --  sequence can take an optional name after the enum keyword
+  --  const keyword makes a variable unchangeable
+    --  cannot declare const without also initializing it with a value
+  --  typedef keyword allows for combining datatypes into new datatypes:
+      -- typedef definition type-name
+      -- i.e. typedef unsigned short int USINT
+==================================================================================
+ENUMS AS TYPES
+    --  enum keyword allows for creation of a sequence of ineteger constants
+      --  optional: sequence can be given a name after the enum keyword
+        --  i.e.  --  enum DAYS {MON, TUE, WED, THUR, FRI}
       --  each of the constants will by default have a value of one more
           than the previous value unless otherwise specified
       --  if no initial value is supplied for the first entry, it will default to 0
-        --  i.e. enum{MON, TUE, WED, THUR, FRI} => WED has an integer value of 2
-        --  enum{MON=1, TUE, WED, THUR=5, FRI} => WED has value 3, FRI has value 6
+        --  i.e.  --  enum DAYS {MON, TUE, WED, THUR, FRI} 
+                        => WED has an integer value of 2
+        --        --  enum WEIRD_DAYS {MON=1, TUE, WED, THUR=5, FRI} 
+                        => WED has value 3, FRI has value 6
       --  enums may contain duplicate values
-==================================================================================
-CONSTANT TYPES
   --  once an enum has been declared, it can be used as a new data-type
-  -- custom data types can also be defined with the typedef keyword
-    -- typedef definition type-name
-    -- i.e. typedef unsigned short int USINT
-  
+
+DEFINING CONSTANTS
+  --  #define directive can be used to specify constant text values
+    --  these directives should appear at the top of the program code
+  --  #ifdef directive is used to evaluate whether a definition curretly exists
+    -- usually followed by a #define directive
+    --  this macro must end with a #endif directive
+
+MORE DIRECTIVES
+  --  #if #else #elif #endif directoves allow for conditional branching
+  --  #undef undefines a constant defined by #define
+  --  #ifndef determiness whether a directive is undefined
+  --  these directives can be embedded in functions or nested
+
+//////////////////////////////////////////////////////////////////////////
+//
+//       ARITHMETIC
+//
+//////////////////////////////////////////////////////////////////////////
+//
+//  --  operators:  +  -  *  /  %  ++  --
+//    --  placing an increment or decrement BEFORE an operand
+//        causes its value to change immediately
+//    --  placing an increment or decrement AFTER an operand
+//        causes its value to first be noted then changed later
+//
+///////////////////////////////////////////////////////////////////////////
